@@ -26,15 +26,6 @@ let trait = function (req, res, query) {
 	contenu_fichier = fs.readFileSync("allumette.json", 'utf-8');
 	allumette = JSON.parse(contenu_fichier);
 
-	if (query.abandonner === noob) {
-		if (allumette.tour === 1) {
-			allumette.vainqueur = 2;
-			allumette.victoire[1]++
-		} else {
-			allumette.vainqueur = 1;
-			allumette.victoire[0]++
-		}
-	}
 
 	if (allumette.nb_allumettes === 0) {
 		page = fs.readFileSync("gagnant.html", 'utf-8');
@@ -66,7 +57,17 @@ let trait = function (req, res, query) {
 		allumette.vainqueur = 2;
 		allumette.victoire[1]++
 		}
-	} else {	
+	} else if (query.abandonner === "noob") {
+		page = fs.readFileSync("gagnant.html", 'utf-8');
+		if (allumette.tour === 1) {
+			allumette.vainqueur = 2;
+			allumette.victoire[1]++
+		} else {
+			allumette.vainqueur = 1;
+			allumette.victoire[0]++
+		}
+	}
+	else {	
 		page = fs.readFileSync("allumette.html", 'utf-8');
 	}
 
