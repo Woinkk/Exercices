@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	</head>
+	<body>
+		<h2>Bienvenue !</h2>
+
+		<p>
+		<!--	Bonjour {pseudo}<br> -->
+			<form action="/req_calculer" method="GET">
+			<input type="number" name="nombre1" value=>  <select name="operateur"><option value="+">+</option><option value="-">-</option><option value="*">*</option><option value="/">/</option><select>  <input type="number" name="nombre2" value=>
+			<input type="hidden" name="pseudo" value={pseudo}>
+			<input type="submit" name="Calculer" value"">
+			</form>											
+			<p>
+			{calcule}
+		</p>
+	</body>
+</html>

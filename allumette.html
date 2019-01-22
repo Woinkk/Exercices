@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	</head>
+	<body>
+		<h2>Bienvenue sur le jeu de l'allumette !</h2>
+
+		<p>
+		<!--	Bonjour {pseudo}<br> -->
+			<form action="/req_retirer" method="GET">
+				C'est au tour du joueur {tour} de joueur<br>
+				{allumettes}<br>
+				Retirer <button name="retirer" value=1>1</button>
+				<button name="retirer" value=2>2</button>
+				<button name="retirer" value=3>3</button>
+				allumettes ou 
+				<button name="abandonner" value="noob">Abandonner</button>
+			</form>											
+			<p>
+		</p>
+	</body>
+</html>
